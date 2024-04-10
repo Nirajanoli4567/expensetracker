@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="layouttt.css" />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .nav {
+      position: fixed;
+      top: 0;
+      background-color: black;
+      width: 100%;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 20px;
+      background-color: black;
+      z-index: 1;
+      color: #fff;
+      .navlinks {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .navlink {
+          padding: 0px 10px;
+        }
+      }
+      @media (max-width: 500px) {
+        .navlinks {
+          display: none;
+        }
+      }
+    }
+    .home {
+      top: 50px;
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .heading {
+          font-size: 32px;
+          color: orange;
+        }
+        .text {
+          font-size: 24px;
+        }
+        .buttons {
+          margin-top: 16px;
+          button {
+            padding: 10px 40px;
+            border-radius: 8px;
+          }
+
+          button:nth-child(1) {
+            background-color: orange;
+            border: none;
+          }
+          button:last-child {
+            border: 2px solid orange;
+            background-color: #fff;
+          }
+        }
+      }
+      .poster {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        .images {
+          position: absolute;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          height: 100%;
+        }
+      }
+    }
+  </style>
+  <body>
+    <section class="nav">
+      <nav>
+        <div class="logo">
+          <h1>Logo</h1>
+        </div>
+        <div class="navlinks">
+          <div class="navlink">Home</div>
+          <div class="navlink">Home</div>
+          <div class="navlink">Home</div>
+          <div class="navlink">Home</div>
+        </div>
+      </nav>
+    </section>
+    <section>
+      <div class="home">
+        <div class="content">
+          <div class="heading">Discover your spending habits</div>
+          <div class="text">Try our expense tracker</div>
+          <div class="buttons">
+            <button>Try now</button>
+            <button>Learn more</button>
+          </div>
+        </div>
+        <div class="poster">
+          <div class="images">
+            <img src="ManOnTheChair@2x.png" alt="" />
+            <img src="freepik--Coins--inject-2_1_.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

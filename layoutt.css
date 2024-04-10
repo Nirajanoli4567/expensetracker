@@ -1,0 +1,15 @@
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.textwhite {
+  color: #fff;
+}
