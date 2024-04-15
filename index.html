@@ -4,128 +4,446 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="layouttt.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-    .nav {
-      position: fixed;
-      top: 0;
-      background-color: black;
-      width: 100%;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
     }
     nav {
+      position: fixed;
+      width: 100vw;
+      z-index: 10;
+      background-color: aqua;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 20px;
-      background-color: black;
-      z-index: 1;
-      color: #fff;
-      .navlinks {
+      padding: 20px;
+      .nav-items {
         display: flex;
         align-items: center;
-        justify-content: center;
-        .navlink {
-          padding: 0px 10px;
+        justify-content: space-between;
+        width: 30vw;
+        button {
+          background-color: black;
+          color: #fff;
+          padding: 10px 30px;
+          border-radius: 8px;
+          font-size: 16px;
+          border: none;
         }
-      }
-      @media (max-width: 500px) {
-        .navlinks {
-          display: none;
+        #last {
+          background: transparent;
+          border: 2px solid black;
+          color: black;
+          padding: 10px 30px;
+          border-radius: 8px;
+          font-size: 16px;
         }
       }
     }
-    .home {
-      top: 50px;
-      position: relative;
-      height: 100vh;
-      width: 100vw;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .content {
+    section {
+      .hero {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         .heading {
           font-size: 32px;
-          color: orange;
         }
-        .text {
+        .subheading {
           font-size: 24px;
         }
-        .buttons {
-          margin-top: 16px;
+        .btns {
           button {
-            padding: 10px 40px;
-            border-radius: 8px;
-          }
-
-          button:nth-child(1) {
-            background-color: orange;
-            border: none;
-          }
-          button:last-child {
+            padding: 10px 30px;
             border: 2px solid orange;
-            background-color: #fff;
+            border-radius: 8px;
+            background-color: orange;
+            color: #fff;
+          }
+          #last {
+            background: transparent;
+            color: black;
           }
         }
       }
-      .poster {
+      .hero2 {
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
-        width: 100%;
-        .images {
-          position: absolute;
+
+        height: 100vh;
+        width: 100vw;
+        .photoes {
+          padding: 40px;
+          height: 100%;
           display: flex;
           align-items: flex-end;
           justify-content: space-between;
+          img {
+            height: 400px;
+          }
+        }
+      }
+    }
+
+    .d {
+      background-color: #ff764a;
+      height: 40vh;
+      color: #fff;
+      .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 48px;
+
+        .details1 {
+          width: 360px;
+          padding: 40px;
+          .heading {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+    .cs {
+      background-color: #ff764a;
+      height: 50vh;
+
+      .contentimage {
+        height: 100%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        .first {
+          padding: 40px;
+          width: 50vw;
           height: 100%;
-          width: 100%;
+          .heading {
+            font-size: 40px;
+            text-align: center;
+          }
+          .icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            .icon {
+              margin-top: 24px;
+            }
+          }
+        }
+        .second {
+          width: 50vw;
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    .users {
+      background-color: #ffffff;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 40px;
+      .content1 {
+        .heading {
+          font-size: 32px;
+          font-weight: 800;
+        }
+      }
+      .content2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        margin-top: 3%;
+        background-color: #ff764a;
+        width: 1280px;
+        height: 240px;
+        font-size: 40px;
+        color: #ffff;
+      }
+    }
+    .socialmedias {
+      background-color: #ffffff;
+      height: 20vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .text {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        .icon {
+          display: flex;
+          align-items: center;
+          margin: 4%;
+          padding: 0px 20px;
+          span {
+            margin-right: 10px;
+            img {
+              height: 2rem;
+              width: 2rem;
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      height: 50vh;
+      .c1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+        .heading {
+          font-size: 24px;
+          font-weight: 600;
+        }
+        button {
+          background-color: #ff764a;
+          color: #fff;
+          border: none;
+          padding: 10px 30px;
+          border-radius: 8px;
+        }
+      }
+      .c2 {
+        display: flex;
+        padding: 50px;
+        align-items: center;
+        justify-content: space-between;
+        .left {
+          .logo {
+            font-size: 32px;
+            font-weight: 600;
+            width: 50px;
+          }
+          .text {
+            margin-top: 8px;
+          }
+        }
+        .right {
+          .social {
+            color: #fff;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 10px;
+            i {
+              font-size: 24px;
+            }
+            .google,
+            .apple {
+              background-color: black;
+              padding: 10px 40px;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+      .c3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .copyright {
+          padding: 0px 30px;
+        }
+        .socialmediass {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          font-size: 24px;
+          padding: 0px 30px;
         }
       }
     }
   </style>
   <body>
-    <section class="nav">
-      <nav>
-        <div class="logo">
-          <h1>Logo</h1>
-        </div>
-        <div class="navlinks">
-          <div class="navlink">Home</div>
-          <div class="navlink">Home</div>
-          <div class="navlink">Home</div>
-          <div class="navlink">Home</div>
-        </div>
-      </nav>
-    </section>
-    <section>
-      <div class="home">
-        <div class="content">
+    <nav>
+      <div class="logo">
+        <h1>Logo</h1>
+      </div>
+      <div class="nav-items">
+        <div class="navlinks">Home</div>
+        <div class="navlinks">Features</div>
+        <div class="navlinks">Contact</div>
+        <button>Sign In</button>
+        <button id="last">Sign Up</button>
+      </div>
+    </nav>
+    <main>
+      <section>
+        <div class="hero">
           <div class="heading">Discover your spending habits</div>
-          <div class="text">Try our expense tracker</div>
-          <div class="buttons">
-            <button>Try now</button>
-            <button>Learn more</button>
+          <div class="subheading">Try our expense tracker</div>
+          <div class="btns">
+            <button>Try Now</button>
+            <button id="last">Learn More</button>
           </div>
         </div>
-        <div class="poster">
-          <div class="images">
+        <div class="hero2">
+          <div class="photoes">
             <img src="ManOnTheChair@2x.png" alt="" />
             <img src="freepik--Coins--inject-2_1_.png" alt="" />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="d">
+        <div class="details">
+          <div class="details1">
+            <div class="heading">Keep spending structured</div>
+            <div class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur, alias? lorem
+            </div>
+          </div>
+
+          <div class="details1">
+            <div class="text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Laboriosam, inventore.
+            </div>
+          </div>
+          <div class="details1">
+            <div class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+              necessitatibus.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cs">
+        <div class="contentimage">
+          <div class="first">
+            <div class="heading">Join 1000+ users in smarter spending</div>
+            <div class="icons">
+              <div class="icon">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores, cum!
+              </div>
+              <div class="icon">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores, cum!
+              </div>
+              <div class="icon">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores, cum!
+              </div>
+            </div>
+          </div>
+          <div class="second">
+            <img src="image 2.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="users">
+          <div class="content1">
+            <div class="heading">Great products, faster than ever</div>
+            <div class="text">
+              Everything you need to build modern UI and great products.
+            </div>
+          </div>
+          <div class="content2">
+            <div class="no1">4000</div>
+            <div class="no2">10000+</div>
+            <div class="no3">8</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="socialmedias">
+          <div class="text">Join 4,000+ companies already growing</div>
+          <div class="icons">
+            <div class="icon">
+              <span><img src="Logomark-2.png" alt="" /></span>
+              Cirooles
+            </div>
+            <div class="icon">
+              <span><img src="Logomark.png" alt="" /></span>
+              Sysiphus
+            </div>
+            <div class="icon">
+              <span><img src="Logomark-2.png" alt="" /></span>
+              Cirooles
+            </div>
+            <div class="icon">
+              <span><img src="Logomark.png" alt="" /></span>
+              Sysiphus
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="footer">
+          <div class="c1">
+            <div class="heading">
+              No long-term contracts. No catches. Simple.
+            </div>
+            <div class="text">Login anytime anywhere</div>
+            <button>Get Started</button>
+          </div>
+          <div class="c2">
+            <div class="left">
+              <div class="logo">Expense Tracker</div>
+              <div class="text">Track you expenses better</div>
+            </div>
+            <div class="right">
+              <div class="text">Get the app</div>
+              <div class="social">
+                <div class="google">
+                  <i class="bx bxl-google-plus"></i>App Store
+                </div>
+                <div class="apple"><i class="bx bxl-apple"></i>Play Store</div>
+              </div>
+            </div>
+          </div>
+          <div class="c3">
+            <div class="copyright">
+              © 2024 Copyright. All rights reserved. Rosan Yonghang
+            </div>
+            <div class="socialmediass">
+              <div class="icon"><i class="bx bxl-twitter"></i></div>
+              <div class="icon"><i class="bx bxl-facebook-circle"></i></div>
+              <div class="icon"><i class="bx bxl-linkedin"></i></div>
+              <div class="icon"><i class="bx bxl-github"></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

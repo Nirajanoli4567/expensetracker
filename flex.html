@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      background-color: rgb(124, 97, 97);
+    }
+    .div {
+      margin: 20px;
+      position: relative;
+      height: 290px;
+      width: 490px;
+      background-color: black;
+      .fig {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  </style>
+  <body>
+    <nav></nav>
+    <main>
+      <section>
+        <div class="container">
+          <div class="div">
+            <div class="fig">
+              <img src="image 2.jpg" alt="" />
+            </div>
+          </div>
+          <div class="div"></div>
+          <div class="div"></div>
+          <div class="div"></div>
+          <div class="div"></div>
+          <div class="div"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
