@@ -21,21 +21,24 @@
       padding: 0;
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
+      text-decoration: none;
     }
     nav {
       position: fixed;
-      width: 100vw;
+      width: 100%;
       z-index: 10;
-      background-color: aqua;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 20px;
+
       .nav-items {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 30vw;
+        gap: 30px;
+
         button {
           background-color: black;
           color: #fff;
@@ -51,6 +54,21 @@
           padding: 10px 30px;
           border-radius: 8px;
           font-size: 16px;
+        }
+        .navlinks a {
+          color: black;
+        }
+      }
+      .bgr {
+        display: none;
+      }
+      @media (max-width: 655px) {
+        .nav-items {
+          display: none;
+        }
+        .bgr {
+          display: block;
+          font-size: 24px;
         }
       }
     }
@@ -82,6 +100,21 @@
             color: black;
           }
         }
+        @media (max-width: 655px) {
+          .heading {
+            font-size: 16px;
+          }
+          .subheading {
+            font-size: 12px;
+            margin-top: 10px;
+          }
+          .btns {
+            button {
+              padding: 5px 10px;
+              margin-top: 10px;
+            }
+          }
+        }
       }
       .hero2 {
         position: absolute;
@@ -101,17 +134,23 @@
           }
         }
       }
+      @media (max-width: 655px) {
+        .hero2 {
+          display: none;
+        }
+      }
     }
 
     .d {
       background-color: #ff764a;
-      height: 40vh;
+
       color: #fff;
       .details {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 48px;
+        flex-wrap: wrap;
 
         .details1 {
           width: 360px;
@@ -119,21 +158,35 @@
           .heading {
             font-size: 32px;
           }
+          @media (max-width: 655px) {
+            .heading {
+              font-size: 24px;
+            }
+          }
+        }
+        @media (max-width: 655px) {
+          .details1 {
+            margin: 0;
+          }
+        }
+      }
+      @media (max-width: 655px) {
+        .details {
+          padding: 0;
         }
       }
     }
     .cs {
       background-color: #ff764a;
-      height: 50vh;
 
       .contentimage {
-        height: 100%;
         color: #fff;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         .first {
           padding: 40px;
-          width: 50vw;
+          width: 50%;
           height: 100%;
           .heading {
             font-size: 40px;
@@ -149,9 +202,20 @@
             }
           }
         }
+        @media (max-width: 655px) {
+          .first {
+            width: 100%;
+            padding: 40px;
+
+            .heading {
+              font-size: 24px;
+            }
+          }
+        }
         .second {
-          width: 50vw;
+          width: 50%;
           height: 100%;
+          overflow: hidden;
 
           img {
             width: 100%;
@@ -160,10 +224,19 @@
           }
         }
       }
+      @media (max-width: 655px) {
+        .contentimage {
+          display: flex;
+          flex-direction: column;
+          .second {
+            display: none;
+          }
+        }
+      }
     }
     .users {
       background-color: #ffffff;
-      height: 40vh;
+      height: 40%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -175,17 +248,43 @@
           font-weight: 800;
         }
       }
+      @media (max-width: 655px) {
+        .content1 {
+          .heading {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+          }
+          .text {
+            font-size: 8px;
+          }
+        }
+      }
       .content2 {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-
+        flex-wrap: wrap;
         margin-top: 3%;
         background-color: #ff764a;
         width: 1280px;
         height: 240px;
         font-size: 40px;
         color: #ffff;
+      }
+      @media (max-width: 655px) {
+        .content2 {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: 655px) {
+      .users {
+        padding: 0;
+        display: flex;
+        align-items: center;
       }
     }
     .socialmedias {
@@ -217,6 +316,20 @@
           }
         }
       }
+      @media (max-width: 655px) {
+        .text {
+          font-size: 16px;
+        }
+        .icons {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+      }
+    }
+    @media (max-width: 655px) {
+      .socialmedias {
+      }
     }
     .footer {
       height: 50vh;
@@ -228,6 +341,11 @@
         .heading {
           font-size: 24px;
           font-weight: 600;
+        }
+        @media (max-width: 655px) {
+          .heading {
+            font-size: 16px;
+          }
         }
         button {
           background-color: #ff764a;
@@ -253,6 +371,30 @@
           }
         }
         .right {
+          .text {
+            color: #ff764a;
+          }
+          .social {
+            display: flex;
+            gap: 20px;
+            .google,
+            .apple {
+              background-color: black;
+              color: #ffff;
+              border: none;
+              border-radius: 8px;
+              padding: 10px 30px;
+            }
+          }
+        }
+      }
+      @media (max-width: 655px) {
+        .c2 {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .right {
           .social {
             color: #fff;
             font-size: 24px;
@@ -272,6 +414,17 @@
             }
           }
         }
+        @media (max-width: 655px) {
+          .right {
+            .social {
+              font-size: 16px;
+              .google {
+                display: flex;
+                flex-direction: column;
+              }
+            }
+          }
+        }
       }
       .c3 {
         display: flex;
@@ -288,6 +441,16 @@
           padding: 0px 30px;
         }
       }
+      @media (max-width: 655px) {
+        .c3 {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column-reverse;
+          .socialmediass {
+            gap: 30px;
+          }
+        }
+      }
     }
   </style>
   <body>
@@ -295,12 +458,15 @@
       <div class="logo">
         <h1>Logo</h1>
       </div>
-      <div class="nav-items">
-        <div class="navlinks">Home</div>
-        <div class="navlinks">Features</div>
-        <div class="navlinks">Contact</div>
+      <div class="nav-items" id="navItems">
+        <div class="navlinks"><a href="index.html">Home</a></div>
+        <div class="navlinks"><a href="feature.html">Feature</a></div>
+        <div class="navlinks"><a href="contact.html">Contact</a></div>
         <button>Sign In</button>
         <button id="last">Sign Up</button>
+      </div>
+      <div class="bgr">
+        <i class="bx bx-menu" onclick="toggleNavbar()" id="hamburger"></i>
       </div>
     </nav>
     <main>
@@ -447,3 +613,4 @@
     </main>
   </body>
 </html>
+<script></script>
